@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  weboccult-intrusion-app:
+    image: harbor.edgesync.cloud/weboccult-containers/weboccult-intrusion-app@sha256:63c105f92bbd7c7b7b00d43543c427f0612633194b8fd549a617f784f867fd77
+    container_name: weboccult-intrusion-detection
+    environment:
+      - TOKEN=TOKEN
+      - DETECTION_MODEL_PATH=WOT03-det-640-20251013.bin
+      - CAMERA_PER_PROCESS=4
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./models:/app/models
+    network_mode: host        
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "pgrep", "-f", "main"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
