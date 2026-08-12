@@ -59,7 +59,7 @@ You can see the architecture diagram ![alt text](/resources/HLD-diagram.png)
 To use the Gotilo Spot Intrusion Detection system, you need a user account and an authentication token. Follow these steps:
 
 #### Step 1: Download & Fill the Document
-Access the document here: [Click Here](https://docs.google.com/document/d/1GL0-45thPzA9FTovkZfZ-IapawwfbqhrSz2aoZpAjH0/edit?tab=t.0#heading=h.21vjscqk5c5o)  
+Access the document here: [Click Here](https://webocculttech-my.sharepoint.com/:w:/g/personal/bhumin_weboccult_com/IQD9Hf7_l6EgQoswuqTEIhM7AZXKbK6xjnToGFY5dA7iqmo?e=YSnY92&wdExp=TEAMS-TREATMENT&web=1)  
 Fill in the required details.
 
 #### Step 2: Submit the Document
